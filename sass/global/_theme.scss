@@ -1,7 +1,9 @@
-$color-primary: #ff00ce !default;
+$color-primary: #F981F5 !default;
 $color-primary-alt: #cc00ff !default;
-$color-secondary: #21ff25 !default;
-$color-background: #d2fbf7 !default;
+$color-secondary: #37E9E9 !default;
+$color-background: #d2fbf7 !default; /*#221D2D*/
+$primary-font: "Bungee", sans-serif!default; 
+$secondary-font: "IBM Plex Mono", monospace;
 
 $brand-colors: (
   primary: $color-primary,
@@ -58,8 +60,10 @@ $font-sizes: (
   }
 
   --color-anchor: #{$link-color};
-  --font-family: "Baloo 2", sans-serif;
+  --font-family-primary: "Bungee", sans-serif;
+  --font-family-secondary: $secondary-font;
   --font-weight-strong: #{$font-weight-strong};
+
 
   @each $key, $size in $font-sizes {
     --font-size-#{$key}: #{$size};

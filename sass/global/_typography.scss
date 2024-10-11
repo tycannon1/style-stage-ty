@@ -5,6 +5,7 @@ h4 {
   font-weight: var(--font-weight-strong);
   line-height: 1;
   margin-bottom: 0.65em;
+  font-family: $primary-font;
 }
 
 h1 {
@@ -40,6 +41,7 @@ li {
 
 p {
   margin: 0 0 1rem;
+  font-family: $secondary-font;
 }
 
 article .container {
