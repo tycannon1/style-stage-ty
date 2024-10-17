@@ -1,9 +1,14 @@
 .features {
-}
-
-#styles {
-}
-
-#styles .features,
-.features.patterned {
+    list-style: none;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        li {
+            width: 33%;
+        }
+    }
+    li {
+        padding: 2rem;
+        border: 5px solid $color-secondary;
+        margin: 1rem;
+    }
 }

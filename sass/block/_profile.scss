@@ -1,2 +1,15 @@
+#styles {
+    div{
+        a {
+            grid-column: 4/-4;
+        }
+    }
+}
+
 .profile {
+    div {
+        ul {
+            list-style: none;
+        }
+    }
 }

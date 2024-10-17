@@ -1,2 +1,15 @@
-#about section:nth-child(2) {
+#contribute {
+    section {
+        ol {
+            list-style-position: inside;
+        }
+    }
+    footer {
+        div {
+            a {
+                grid-column: 4/-4;
+                margin: 1rem;
+            }
+        }
+    }
 }

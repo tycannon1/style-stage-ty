@@ -1,0 +1,22 @@
+body {
+    background-color: $color-background;
+    color: white;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+main, aside, footer {
+    div {
+        margin: 1rem;
+
+        * {
+            grid-column: 1/-1;
+        }
+
+        article {
+            margin: 1rem 0;
+        }
+    }
+}

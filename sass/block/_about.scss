@@ -1,2 +1,16 @@
 #about {
+    section {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            text-decoration: none;
+            li {
+                padding: 0.5rem 1rem;
+                margin: 1rem;
+                background-color: white;
+                color: black;
+            }
+        }
+    }
 }

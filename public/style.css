@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-/*#221D2D*/
 :root {
   --color-primary: #F981F5;
   --color-primary-alt: #cc00ff;
   --color-secondary: #37E9E9;
-  --color-background: #d2fbf7;
+  --color-background: #221D2D;
   --color-text: #bc4db8;
   --color-light: #fff;
   --color-anchor: #F981F5;
@@ -24,20 +23,12 @@
  * @link https://github.com/hankchizljaw/modern-css-reset
 */
 /* Box sizing rules */
+/* Remove default margin and padding*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+  padding: 0;
   margin: 0;
 }
 
@@ -199,6 +190,135 @@ blockquote::after {
   font-weight: var(--font-weight-strong);
 }
 
+body {
+  background-color: #221D2D;
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+main div, aside div, footer div {
+  margin: 1rem;
+}
+main div *, aside div *, footer div * {
+  grid-column: 1/-1;
+}
+main div article, aside div article, footer div article {
+  margin: 1rem 0;
+}
+
+header {
+  padding: 1rem;
+}
+header div {
+  text-align: center;
+}
+header div h1 {
+  grid-column: 1/-1;
+}
+header div h2 {
+  grid-column: 1/-1;
+}
+header div p {
+  grid-column: 1/-1;
+  text-align: center;
+}
+header div a {
+  grid-column: 4/-4;
+}
+@media screen and (min-width: 768px) {
+  header div a {
+    grid-column: 5/-5;
+  }
+}
+
+nav {
+  padding: 1rem;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+nav ul li {
+  list-style: none;
+  width: 33%;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  nav ul li {
+    width: 16%;
+  }
+}
+
+#about section ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-decoration: none;
+}
+#about section ul li {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  background-color: white;
+  color: black;
+}
+
+#guidelines section a {
+  grid-column: 4/-4;
+}
+
+#contribute section ol {
+  list-style-position: inside;
+}
+#contribute footer div a {
+  grid-column: 4/-4;
+  margin: 1rem;
+}
+
+.features {
+  list-style: none;
+}
+@media screen and (min-width: 768px) {
+  .features {
+    display: flex;
+  }
+  .features li {
+    width: 33%;
+  }
+}
+.features li {
+  padding: 2rem;
+  border: 5px solid #37E9E9;
+  margin: 1rem;
+}
+
+#styles div a {
+  grid-column: 4/-4;
+}
+
+.profile div ul {
+  list-style: none;
+}
+
+.page-footer div ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .page-footer div ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.page-footer div ul li {
+  margin: 1rem;
+}
+
 .skip-link {
   position: absolute;
   top: auto;
@@ -219,14 +339,14 @@ blockquote::after {
   padding: 0.5em;
 }
 
-[class^=link]:not(.link-codepen) {
+[class^=link] {
   min-height: 3em;
   background-color: var(--color-primary);
   color: #fff;
   box-shadow: 0.18em 0.18em var(--color-secondary);
 }
 
-[class^=link]:not(.link-codepen),
+[class^=link],
 .profile .container > a {
   display: inline-flex;
   align-items: center;
@@ -239,50 +359,16 @@ blockquote::after {
   text-align: center;
   text-decoration: none;
 }
-[class^=link]:not(.link-codepen):hover, [class^=link]:not(.link-codepen):focus,
+[class^=link]:hover, [class^=link]:focus,
 .profile .container > a:hover,
 .profile .container > a:focus {
   transform: translate(-0.15em, -0.15em);
   box-shadow: 0.3em 0.3em var(--color-secondary);
 }
-[class^=link]:not(.link-codepen):focus,
+[class^=link]:focus,
 .profile .container > a:focus {
   outline-color: transparent;
   outline-style: solid;
-}
-
-.page-footer [class^=link] {
-  width: 100%;
-  min-height: 2.5em;
-  background-color: var(--color-background);
-  color: var(--color-primary);
-}
-
-.link-codepen {
-  display: block;
-  margin-top: 3rem;
-  font-size: var(--font-size-h4);
-}
-.link-codepen::before {
-  position: absolute;
-  padding-right: 1.25em;
-  transform: translate(15%, -90%) rotate(-3deg);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 79.6 187.1'%3E%3Cpath fill='%23cc00ff' d='M12 131l-2 13-3 26a10 10 0 000 2 1 1 0 001 0 24 24 0 002-3 37 37 0 016-8 73 73 0 007-9l24-33 4-5a70 70 0 006-7l15-20a8 8 0 001-1 1 1 0 000-1 16 16 0 00-2-1l-8-3a69 69 0 01-13-6 7 7 0 00-1-1l-16-6-13-7a57 57 0 00-10-4 17 17 0 01-2-1 2 2 0 01-1-4 18 18 0 012-2 93 93 0 0011-13 95 95 0 018-8l10-11a32 32 0 003-4c3-5 7-9 12-13a12 12 0 011-1 1 1 0 012 0 2 2 0 010 2 27 27 0 01-3 3 104 104 0 00-10 12 115 115 0 01-11 13 102 102 0 00-11 13 78 78 0 01-5 7l-2 2a1 1 0 000 1l19 8 9 4 3 2a77 77 0 0113 5 22 22 0 003 2l17 8a8 8 0 011 1 2 2 0 010 2 22 22 0 01-1 3l-11 14a33 33 0 00-2 3 98 98 0 01-10 13l-5 7-23 31a87 87 0 01-7 9 60 60 0 00-6 8l-2 3a1 1 0 000 1l9-4 12-6 10-6 13-7a10 10 0 012 0 2 2 0 012 1 2 2 0 010 3 24 24 0 01-3 1l-8 4-20 11-24 12a19 19 0 01-2 1 2 2 0 01-3-2 10 10 0 010-2l1-7 3-24 3-21a39 39 0 011-5 2 2 0 013-1 2 2 0 011 2v4z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 130%;
-  background-size: 14%;
-  color: #6f6ffd;
-  font-size: 0.85em;
-  content: "Jump right in";
-}
-
-.link-allstyles {
-  font-size: var(--font-size-h4);
-}
-@media (max-width: 400px) {
-  .link-allstyles {
-    margin-left: 6rem;
-  }
 }
 
 .link-github svg {
