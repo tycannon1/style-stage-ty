@@ -7,8 +7,16 @@ nav {
             list-style: none;
             width: 33%;
             text-align: center;
+            font-family: $primary-font;
             @media screen and (min-width: 768px) {
                 width: 16%;
+            }
+            a {
+                color: white;
+                //text-decoration: $color-secondary underline wavy;
+                text-decoration: $color-secondary wavy underline;
+                text-underline-offset: 10px;
+                text-decoration-thickness: 3px;
             }
         }
     }

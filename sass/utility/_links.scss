@@ -21,13 +21,11 @@
 
 [class^="link"] {
   min-height: 3em;
-  background-color: var(--color-primary);
   color: #fff;
-  box-shadow: 0.18em 0.18em var(--color-secondary);
+  border: solid 5px $color-primary;
 }
 
-[class^="link"],
-.profile .container > a {
+[class^="link"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -51,6 +49,10 @@
   }
 }
 
+.profile .container > a {
+  color: white;
+}
+
 // stylelint-disable-next-line no-descending-specificity
 .page-footer [class^="link"] {
 }
@@ -66,4 +68,9 @@
     margin-right: 0.25em;
     fill: currentColor;
   }
+  
+}
+
+.link-guidelines, .link-github, .link-downloadcss, .link-codepen, .link-downloadhtml {
+  font-family: $primary-font;
 }

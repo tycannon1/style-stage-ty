@@ -11,7 +11,7 @@
   --font-family-secondary: $secondary-font;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
-  --font-size-h2: 3rem;
+  --font-size-h2: 1.5rem;
   --font-size-h3: 2rem;
   --font-size-h4: 1.35rem;
   --font-size-text: 1.15rem;
@@ -76,6 +76,7 @@ h4 {
   line-height: 1;
   margin-bottom: 0.65em;
   font-family: "Bungee", sans-serif;
+  color: #F981F5;
 }
 
 h1 {
@@ -89,10 +90,14 @@ h2 {
   text-align: center;
 }
 
+header h2 {
+  font-family: "IBM Plex Mono", monospace;
+  color: #37E9E9;
+}
+
 #main h2 {
-  background-color: var(--color-secondary);
+  text-align: left;
   align-self: center;
-  color: var(--color-background);
   padding: 0.25em 0.5em;
 }
 
@@ -130,7 +135,7 @@ strong {
 }
 
 a {
-  color: var(--color-anchor);
+  color: #37E9E9;
 }
 
 blockquote {
@@ -140,7 +145,6 @@ blockquote {
   place-items: center;
   padding: 0;
   margin: 3rem 0;
-  color: var(--color-primary);
 }
 blockquote > * {
   grid-area: blockquote;
@@ -153,6 +157,8 @@ blockquote p {
 }
 blockquote p strong {
   font-size: 1.15em;
+  font-family: "Bungee", sans-serif;
+  color: #F981F5;
 }
 blockquote::before {
   position: absolute;
@@ -188,6 +194,15 @@ blockquote::after {
 #contribute p:nth-of-type(1) {
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight-strong);
+}
+
+.container ul li {
+  font-family: "Bungee", sans-serif;
+}
+
+.container ol li {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
 }
 
 body {
@@ -246,11 +261,18 @@ nav ul li {
   list-style: none;
   width: 33%;
   text-align: center;
+  font-family: "Bungee", sans-serif;
 }
 @media screen and (min-width: 768px) {
   nav ul li {
     width: 16%;
   }
+}
+nav ul li a {
+  color: white;
+  text-decoration: #37E9E9 wavy underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
 }
 
 #about section ul {
@@ -341,13 +363,11 @@ nav ul li {
 
 [class^=link] {
   min-height: 3em;
-  background-color: var(--color-primary);
   color: #fff;
-  box-shadow: 0.18em 0.18em var(--color-secondary);
+  border: solid 5px #F981F5;
 }
 
-[class^=link],
-.profile .container > a {
+[class^=link] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -359,16 +379,17 @@ nav ul li {
   text-align: center;
   text-decoration: none;
 }
-[class^=link]:hover, [class^=link]:focus,
-.profile .container > a:hover,
-.profile .container > a:focus {
+[class^=link]:hover, [class^=link]:focus {
   transform: translate(-0.15em, -0.15em);
   box-shadow: 0.3em 0.3em var(--color-secondary);
 }
-[class^=link]:focus,
-.profile .container > a:focus {
+[class^=link]:focus {
   outline-color: transparent;
   outline-style: solid;
+}
+
+.profile .container > a {
+  color: white;
 }
 
 .link-github svg {
@@ -376,4 +397,8 @@ nav ul li {
   height: 1em;
   margin-right: 0.25em;
   fill: currentColor;
+}
+
+.link-guidelines, .link-github, .link-downloadcss, .link-codepen, .link-downloadhtml {
+  font-family: "Bungee", sans-serif;
 }

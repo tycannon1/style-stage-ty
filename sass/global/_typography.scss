@@ -6,6 +6,7 @@ h4 {
   line-height: 1;
   margin-bottom: 0.65em;
   font-family: $primary-font;
+  color: $color-primary;
 }
 
 h1 {
@@ -19,10 +20,14 @@ h2 {
   text-align: center;
 }
 
+header h2 {
+  font-family: $secondary-font;
+  color: $color-secondary;
+}
+
 #main h2 {
-  background-color: var(--color-secondary);
+  text-align: left;
   align-self: center;
-  color: var(--color-background);
   padding: 0.25em 0.5em;
 }
 
@@ -68,7 +73,7 @@ strong {
 }
 
 a {
-  color: var(--color-anchor);
+  color: $color-secondary;
 }
 
 blockquote {
@@ -78,7 +83,6 @@ blockquote {
   place-items: center;
   padding: 0;
   margin: 3rem 0;
-  color: var(--color-primary);
 
   > * {
     grid-area: blockquote;
@@ -92,6 +96,8 @@ blockquote {
 
     strong {
       font-size: 1.15em;
+      font-family: $primary-font;
+      color: $color-primary;
     }
   }
 
@@ -132,4 +138,13 @@ blockquote {
     font-size: var(--font-size-h4);
     font-weight: var(--font-weight-strong);
   }
+}
+
+.container ul li {
+  font-family: $primary-font;
+}
+
+.container ol li {
+  font-family: $secondary-font;
+  font-weight: 600;
 }
