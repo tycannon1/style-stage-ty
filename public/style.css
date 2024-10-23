@@ -8,7 +8,7 @@
   --color-light: #fff;
   --color-anchor: #F981F5;
   --font-family-primary: "Bungee", sans-serif;
-  --font-family-secondary: $secondary-font;
+  --font-family-secondary: "IBM Plex Mono", monospace;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
   --font-size-h2: 1.5rem;

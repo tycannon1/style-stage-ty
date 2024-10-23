@@ -2,8 +2,8 @@ $color-primary: #F981F5 !default;
 $color-primary-alt: #cc00ff !default;
 $color-secondary: #37E9E9 !default;
 $color-background: #221D2D !default;
-$primary-font: "Bungee", sans-serif!default; 
-$secondary-font: "IBM Plex Mono", monospace;
+$primary-font: "Bungee", sans-serif !default; 
+$secondary-font: "IBM Plex Mono", monospace !default;
 
 $brand-colors: (
   primary: $color-primary,
@@ -61,7 +61,7 @@ $font-sizes: (
 
   --color-anchor: #{$link-color};
   --font-family-primary: "Bungee", sans-serif;
-  --font-family-secondary: $secondary-font;
+  --font-family-secondary: "IBM Plex Mono", monospace;
   --font-weight-strong: #{$font-weight-strong};
 
 
