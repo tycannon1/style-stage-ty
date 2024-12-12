@@ -4,7 +4,28 @@ header {
         text-align: center;
         h1 {
             grid-column: 1/-1;
+            position: relative; // Ensure pseudo-elements are positioned relative to the h1
+            text-align: center;
+
+            &::before,
+            &::after {
+                content: "★";
+                color: color(primary); // Use your theme's primary color or any specific value
+                font-size: 2rem; // Adjust star size as needed
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &::before {
+                left: 20rem; // Adjust for spacing on the left
+            }
+
+            &::after {
+                right: 20rem; // Adjust for spacing on the right
+            }
         }
+
         h2 {
             grid-column: 1/-1;
         }

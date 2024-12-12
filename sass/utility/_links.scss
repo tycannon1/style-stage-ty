@@ -5,7 +5,7 @@
   width: 1px;
   height: 1px;
   background-color: var(--color-secondary);
-  color: #fff;
+  color: #5D3722;
   font-size: 1.125rem;
   overflow: hidden;
 
@@ -21,7 +21,7 @@
 
 [class^="link"] {
   min-height: 3em;
-  color: #fff;
+  color: #5D3722;
   border: solid 5px $color-primary;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .profile .container > a {
-  color: white;
+  color: #F4A8CA;
 }
 
 // stylelint-disable-next-line no-descending-specificity

@@ -1,9 +1,10 @@
-$color-primary: #F981F5 !default;
-$color-primary-alt: #cc00ff !default;
-$color-secondary: #37E9E9 !default;
-$color-background: #221D2D !default;
-$primary-font: "Bungee", sans-serif !default; 
-$secondary-font: "IBM Plex Mono", monospace !default;
+$color-primary: #5D3722;
+$color-primary-alt: #F4A8CA;
+$color-secondary:#9EE4B4;
+$color-background: #FBF1D0, rgba(254, 241, 208, 1);
+$primary-font: 'Chicle', cursive;
+$secondary-font: "Rubik Dirt", system-ui;
+
 
 $brand-colors: (
   primary: $color-primary,
@@ -16,14 +17,14 @@ $color-body: scale-color(
   $lightness: -30%,
   $saturation: -50%
 ) !default;
-$color-gray: mix(#767676, $color-body, 70%) !default;
+$color-gray: mix(#F4A8CA, $color-body, 70%) !default;
 
 $colors: map-merge(
   $brand-colors,
   (
     background: $color-background,
     text: $color-body,
-    light: #fff,
+    light: #F4A8CA,
   )
 );
 
