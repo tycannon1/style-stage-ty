@@ -8,15 +8,26 @@ nav {
             width: 33%;
             text-align: center;
             font-family: $primary-font;
+            padding-left: 6%;
+            padding-top: 2%;
+        
             @media screen and (min-width: 768px) {
                 width: 16%;
             }
             a {
-                color: #F4A8CA;
-                //text-decoration: $color-secondary underline wavy;
-                text-decoration: $color-secondary wavy underline;
-                text-underline-offset: 10px;
-                text-decoration-thickness: 3px;
+                display: block;
+                padding: 1rem;
+                color: #fff;
+                background-color: $color-primary; // Background color for the boxes
+                text-decoration: none;
+                font-weight: bold;
+                border-radius: 20px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease; // Apply same transition to the link
+    
+                &:hover {
+                    color: #fff;
+                    background-color: $color-primary-alt; // Optional: change background color on hover
+                }
             }
         }
     }
